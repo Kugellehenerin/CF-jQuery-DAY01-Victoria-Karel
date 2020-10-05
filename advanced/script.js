@@ -15,7 +15,10 @@ $(document).ready(function() {
     var order = $("<li>Other Template</li>");
     var contact = $("<li>Contact US</li>");
     $('ul:nth-child(2)').prepend(templates, order, contact);
-    var text = $("I want a programming language in which I need only to say what I wish, and done', give him a lollipop.")
-    $('#content-wrap').text().replace("Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.", "I want a programming language in which I need only to say what I wish, and done.");
+    
+});
 
+$('#content-wrap p').each(function() {
+    var text = $(this).text();
+    $(this).text(text.replace('Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.', 'I want a programming language in which I need only to say what I wish, and done.')); 
 });
